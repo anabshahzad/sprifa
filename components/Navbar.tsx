@@ -26,7 +26,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 flex flex-col items-center px-4">
       <motion.nav
         initial={{ y: -20, opacity: 0 }}
         animate={{
@@ -35,11 +35,10 @@ export function Navbar() {
           height: scrolled ? 60 : 72,
         }}
         transition={{ duration: 0.4, ease: [0.2, 0.7, 0.3, 1] }}
-        className={`glass flex w-full max-w-6xl items-center justify-between rounded-full border border-border px-5 transition-colors duration-300 ${
-          scrolled ? "bg-card/80 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.15)]" : "bg-card/50"
-        }`}
+        className={`flex w-full max-w-6xl items-center justify-between rounded-full border border-border px-5 transition-colors duration-300 backdrop-blur-md ${scrolled ? "bg-card/80 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.15)]" : "bg-card/50"
+          }`}
       >
-        <a href="#top" className="shrink-0">
+        <a href="#top" className="shrink-0 relative z-80">
           <LogoFull className="h-6" />
         </a>
 
@@ -78,7 +77,7 @@ export function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="glass absolute inset-x-4 top-[88px] z-40 flex flex-col gap-1 rounded-3xl border border-border bg-card/95 p-4 shadow-xl lg:hidden"
+          className="glass w-full max-w-6xl z-40 flex flex-col gap-1 rounded-3xl border border-border bg-card/95 p-4 shadow-xl lg:hidden"
         >
           {LINKS.map((l) => (
             <a

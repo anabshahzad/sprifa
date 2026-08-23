@@ -25,7 +25,7 @@ export function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        {/* <div className="mt-16 grid gap-6 md:grid-cols-3">
           {TESTIMONIALS.map((t, i) => (
             <motion.div
               key={i}
@@ -40,7 +40,7 @@ export function Testimonials() {
               <div className="text-xs text-muted">{t.role}</div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

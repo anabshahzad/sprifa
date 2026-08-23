@@ -43,7 +43,7 @@ export function Work() {
             visual={<InvoCanvasPreview />}
             reverse
           />
-          <CaseStudyCard
+          {/* <CaseStudyCard
             title="[Next case study]"
             subtitle="[Add a short one-line result for this project.]"
             tags={["PROJECT TYPE"]}
@@ -53,7 +53,7 @@ export function Work() {
               </div>
             }
             placeholder
-          />
+          /> */}
         </div>
       </div>
     </section>
