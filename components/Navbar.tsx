@@ -50,7 +50,16 @@ export function Navbar() {
           ))}
         </div>
 
-        
+        <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
+          <a
+            href="#contact"
+            className="group inline-flex items-center gap-1.5 rounded-full bg-fg px-5 py-2.5 text-sm font-semibold text-bg transition-transform hover:-translate-y-0.5"
+          >
+            Let&apos;s Talk
+            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+          </a>
+        </div>
 
         <div className="flex items-center gap-2 lg:hidden">
           <ThemeToggle />
