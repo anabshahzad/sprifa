@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${manrope.variable} h-full antialiased`}
+      className={`${jakarta.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-fg transition-colors duration-300">
         <ThemeProvider>{children}</ThemeProvider>

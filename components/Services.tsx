@@ -6,15 +6,15 @@ import { ServiceCard } from "./ServiceCard";
 
 function BrowserVisual() {
   return (
-    <div className="rounded-2xl border border-border bg-bg-alt p-4">
-      <div className="mb-3 flex items-center gap-1.5">
-        <span className="h-2 w-2 rounded-full bg-lime/70" />
-        <span className="h-2 w-2 rounded-full bg-aqua/70" />
-        <span className="h-2 w-2 rounded-full bg-teal/70" />
+    <div className="rounded-xl border border-border bg-bg-alt p-3">
+      <div className="mb-2 flex items-center gap-1.5">
+        <span className="h-1.5 w-1.5 rounded-full bg-lime/70" />
+        <span className="h-1.5 w-1.5 rounded-full bg-aqua/70" />
+        <span className="h-1.5 w-1.5 rounded-full bg-teal/70" />
       </div>
-      <div className="h-3 w-2/3 rounded bg-card" />
-      <div className="mt-2 h-3 w-1/2 rounded bg-card" />
-      <div className="mt-3 h-16 rounded-xl brand-gradient-bg opacity-90" />
+      <div className="h-2.5 w-2/3 rounded bg-card" />
+      <div className="mt-1.5 h-2.5 w-1/2 rounded bg-card" />
+      <div className="mt-2.5 h-10 rounded-lg brand-gradient-bg opacity-90" />
     </div>
   );
 }
@@ -22,11 +22,11 @@ function BrowserVisual() {
 function PhoneVisual() {
   return (
     <div className="flex justify-center">
-      <div className="w-28 rounded-[1.6rem] border border-border bg-bg-alt p-2.5">
-        <div className="mx-auto mb-2 h-1 w-8 rounded-full bg-card" />
-        <div className="h-20 rounded-xl brand-gradient-bg opacity-90" />
-        <div className="mt-2 h-2.5 w-2/3 rounded bg-card" />
-        <div className="mt-1.5 h-2.5 w-1/2 rounded bg-card" />
+      <div className="w-20 rounded-[1.2rem] border border-border bg-bg-alt p-2">
+        <div className="mx-auto mb-1.5 h-1 w-6 rounded-full bg-card" />
+        <div className="h-14 rounded-lg brand-gradient-bg opacity-90" />
+        <div className="mt-1.5 h-2 w-2/3 rounded bg-card" />
+        <div className="mt-1 h-2 w-1/2 rounded bg-card" />
       </div>
     </div>
   );
@@ -34,18 +34,18 @@ function PhoneVisual() {
 
 function DashboardVisual() {
   return (
-    <div className="rounded-2xl border border-border bg-bg-alt p-4">
-      <div className="grid grid-cols-2 gap-2">
-        <div className="rounded-lg bg-card p-2.5">
-          <div className="text-[10px] text-muted">MRR</div>
-          <div className="text-sm font-bold text-fg">$18.2k</div>
+    <div className="rounded-xl border border-border bg-bg-alt p-3">
+      <div className="grid grid-cols-2 gap-1.5">
+        <div className="rounded-lg bg-card p-2">
+          <div className="text-[9px] text-muted">MRR</div>
+          <div className="text-xs font-bold text-fg">$18.2k</div>
         </div>
-        <div className="rounded-lg bg-card p-2.5">
-          <div className="text-[10px] text-muted">Active users</div>
-          <div className="text-sm font-bold text-fg">2,140</div>
+        <div className="rounded-lg bg-card p-2">
+          <div className="text-[9px] text-muted">Active users</div>
+          <div className="text-xs font-bold text-fg">2,140</div>
         </div>
       </div>
-      <div className="mt-2 h-12 rounded-lg bg-card" />
+      <div className="mt-1.5 h-8 rounded-lg bg-card" />
     </div>
   );
 }
@@ -53,11 +53,10 @@ function DashboardVisual() {
 function AutomationVisual() {
   const steps = ["Website", "CRM", "WhatsApp", "Dashboard", "Customer"];
   return (
-    <div className="flex flex-col gap-1.5 rounded-2xl border border-border bg-bg-alt p-4">
-      {steps.map((s, i) => (
-        <div key={s} className="flex items-center gap-2">
-          <div className="flex-1 rounded-lg bg-card px-3 py-2 text-xs font-medium text-fg">{s}</div>
-          {i < steps.length - 1 && <div className="h-3 w-px bg-border" />}
+    <div className="flex flex-col gap-1 rounded-xl border border-border bg-bg-alt p-3">
+      {steps.map((s) => (
+        <div key={s} className="rounded-lg bg-card px-2.5 py-1.5 text-[11px] font-medium text-fg">
+          {s}
         </div>
       ))}
     </div>
@@ -123,7 +122,7 @@ export function Services() {
           </motion.h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((s) => (
             <ServiceCard
               key={s.title}

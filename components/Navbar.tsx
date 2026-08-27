@@ -7,7 +7,7 @@ import { LogoFull } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 
 const LINKS = [
-  { label: "Work", href: "#work" },
+  { label: "Work", href: "#products" },
   { label: "Services", href: "#services" },
   { label: "Products", href: "#products" },
   { label: "Process", href: "#process" },

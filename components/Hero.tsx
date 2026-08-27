@@ -32,7 +32,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 18, filter: "blur(6px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.2, 0.7, 0.3, 1] }}
-          className="text-[clamp(3rem,7vw,7rem)] font-extrabold leading-[0.98] tracking-[-0.045em] text-fg"
+          className="text-[clamp(3rem,7vw,7rem)] font-semibold leading-[0.98] tracking-[-0.045em] text-fg"
         >
           We design and build{" "}
           <span className="brand-gradient-text">the tools</span>
@@ -63,7 +63,7 @@ export function Hero() {
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </a>
           <a
-            href="#work"
+            href="#products"
             className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-semibold text-fg transition-colors hover:bg-bg-alt"
           >
             Explore Our Work

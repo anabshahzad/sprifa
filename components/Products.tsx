@@ -3,6 +3,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight, QrCode, MenuSquare, MessageCircle, ShoppingBag, User } from "lucide-react";
 import { InvoCanvasPreview } from "./InvoCanvasPreview";
+import { QRServePreview } from "./QRServePreview";
+
+const QR_TAGS = ["PRODUCT DESIGN", "WHATSAPP", "AUTOMATION"];
+const INVO_TAGS = ["SAAS", "PRODUCT DESIGN", "DEVELOPMENT"];
 
 const FLOW = [
   { label: "QR Code", icon: QrCode },
@@ -38,7 +42,7 @@ export function Products() {
           </motion.h2>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="flex flex-col gap-6">
           {/* QRServe */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -52,33 +56,51 @@ export function Products() {
               className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full opacity-40 blur-3xl"
               style={{ background: "radial-gradient(closest-side, rgba(0,230,220,0.35), transparent 70%)" }}
             />
+            <div className="mb-5 flex flex-wrap gap-2">
+              {QR_TAGS.map((t) => (
+                <span
+                  key={t}
+                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold tracking-[0.1em] text-white/60"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
             <h3 className="text-2xl font-bold">QRServe</h3>
             <p className="mt-2 max-w-sm text-sm text-white/60">
               Turn a menu scan into a conversation.
             </p>
 
-            <div className="relative mt-8 flex flex-col gap-2">
-              {FLOW.map((step, i) => (
-                <motion.div
-                  key={step.label}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <div
-                    className="flex h-9 w-9 items-center justify-center rounded-xl"
-                    style={{ background: "linear-gradient(135deg, rgba(168,232,95,0.25), rgba(0,216,208,0.25))" }}
+            <div className="mt-8 grid gap-8 sm:grid-cols-[1fr_auto]">
+              <div className="relative flex flex-col justify-center gap-2">
+                {FLOW.map((step, i) => (
+                  <motion.div
+                    key={step.label}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex items-center gap-3"
                   >
-                    <step.icon className="h-4 w-4 text-[#72D85A]" />
-                  </div>
-                  <span className="text-sm font-medium text-white/85">{step.label}</span>
-                  {i < FLOW.length - 1 && (
-                    <div className="h-4 w-px flex-1 max-w-0" />
-                  )}
-                </motion.div>
-              ))}
+                    <div
+                      className="flex h-9 w-9 items-center justify-center rounded-xl"
+                      style={{ background: "linear-gradient(135deg, rgba(168,232,95,0.25), rgba(0,216,208,0.25))" }}
+                    >
+                      <step.icon className="h-4 w-4 text-[#72D85A]" />
+                    </div>
+                    <span className="text-sm font-medium text-white/85">{step.label}</span>
+                  </motion.div>
+                ))}
+              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="justify-self-center sm:justify-self-end"
+              >
+                <QRServePreview dark />
+              </motion.div>
             </div>
 
             <a
@@ -103,12 +125,22 @@ export function Products() {
               className="pointer-events-none absolute -left-16 -bottom-16 h-72 w-72 rounded-full opacity-30 blur-3xl"
               style={{ background: "radial-gradient(closest-side, rgba(168,232,95,0.35), transparent 70%)" }}
             />
+            <div className="mb-5 flex flex-wrap gap-2">
+              {INVO_TAGS.map((t) => (
+                <span
+                  key={t}
+                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold tracking-[0.1em] text-white/60"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
             <h3 className="text-2xl font-bold">InvoCanvas</h3>
             <p className="mt-2 max-w-sm text-sm text-white/60">
               Build invoices exactly the way your business needs them.
             </p>
 
-            <div className="mt-8">
+            <div className="mt-8 max-w-md">
               <InvoCanvasPreview dark />
             </div>
 

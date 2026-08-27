@@ -31,7 +31,7 @@ const COLUMNS = [
   {
     heading: "Explore",
     links: [
-      { label: "Work", href: "#work" },
+      { label: "Work", href: "#products" },
       { label: "Services", href: "#services" },
       { label: "Products", href: "#products" },
       { label: "Process", href: "#process" },
@@ -101,7 +101,7 @@ export function Footer() {
                 <XGlyph />
               </a>
               <a
-                href="#"
+                href="mailto:sprifaoffical@gmail.com"
                 aria-label="Email"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-teal hover:text-teal"
               >

@@ -49,7 +49,7 @@
   --color-aqua: var(--aqua);
   --color-lime: var(--lime);
   --color-green: var(--green);
-  --font-sans: var(--font-manrope);
+  --font-sans: var(--font-jakarta);
 }
 
 * {
@@ -58,6 +58,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 112px;
 }
 
 body {
@@ -112,6 +113,15 @@ body {
 .glass {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+}
+
+@keyframes flow-dash {
+  to { stroke-dashoffset: -20; }
+}
+
+.flow-line {
+  stroke-dasharray: 3 7;
+  animation: flow-dash 1.4s linear infinite;
 }
 
 @keyframes marquee {
