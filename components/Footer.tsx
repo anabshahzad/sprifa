@@ -101,7 +101,7 @@ export function Footer() {
                 <XGlyph />
               </a>
               <a
-                href="mailto:sprifaoffical@gmail.com"
+                href="mailto:sprifaofficial@gmail.com"
                 aria-label="Email"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-teal hover:text-teal"
               >

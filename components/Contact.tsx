@@ -116,7 +116,7 @@ export function Contact() {
                 +92 328 9304793
               </a>
               <a
-                href="mailto:sprifaoffical@gmail.com"
+                href="mailto:sprifaofficial@gmail.com"
                 className="group flex items-center gap-3 text-sm font-medium text-white/85 transition-colors hover:text-white"
               >
                 <span
@@ -125,7 +125,7 @@ export function Contact() {
                 >
                   <Mail className="h-4 w-4 text-[#00E6DC]" />
                 </span>
-                sprifaoffical@gmail.com
+                sprifaofficial@gmail.com
               </a>
               <div className="flex items-center gap-3 text-sm font-medium text-white/85">
                 <span
